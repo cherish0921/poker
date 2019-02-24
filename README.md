@@ -13,6 +13,25 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 
+# 麒麟测试网
+https://kylin.eosx.io/tools/account/create
+
+# 账户
+{
+    "msg": "succeeded", 
+    "keys": {
+        "active_key": {
+            "public": "EOS8gmrBpEmAWto4ea46MyU4PrE9TVpBoh8TvR7kkTwLMNESrL9WK", 
+            "private": "5JjEywaQH78EZdazFtF9DW18fhJLHUdC7kuCzSvkpnaddH6LvcQ"
+        }, 
+        "owner_key": {
+            "public": "EOS4xvVwV9VeM4TtknvswNVguhhW8owy22aAWpyaw4UKiAzUnrNbg", 
+            "private": "5KHLi8mNM2otYkhtZGV6HEBZeNPEdNQf6UuXFefv4Hh8fQ26AS1"
+        }
+    }, 
+    "account": "myeostest333"
+}
+
 # 合约地址
 https://kylin.eosx.io/account/myeosgame111?mode=contract&sub=tables&table=bet&lowerBound=&upperBound=&limit=100
 
@@ -51,7 +70,10 @@ static const map<int,int> wins_map = {
 };
 
 # 所有扑克牌
-/ static vector<string> card_value = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
+/ static vector<string> card_value = {
+    "2","3","4","5","6","7",
+    "8",
+    "9","10","J","Q","K","A"};
 // static vector<string> card_color = {"", "黑桃", "红桃", "樱花", "方片"};
 static vector<int> cards = {100,101,102,103,104,105,106,107,108,109,110,111,112,
 200,201,202,203,204,205,206,207,208,209,210,211,212,
@@ -69,3 +91,9 @@ static vector<int> cards = {999, // 这个999是无效数据，占用位置0
 }; // 所有得扑克牌
 
 302 就代表 樱花 4
+
+# 接口文档
+https://github.com/cherish0921/poker_game/blob/master/dragontiger/myeosgame111.md
+
+# eosjs调用示例
+https://github.com/qq776355102/eos_dapp_development_cn/blob/master/docs/eosjs_manual.md

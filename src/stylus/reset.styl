@@ -60,3 +60,41 @@ a,a:link,a:visited,a:hover
 	min-height: 100vh
 	padding-top: 1.07rem
 	background-color: #343047
+/*全局动画*/
+@keyframes  bigAssButtonPulse {
+	from { 
+		background-color: #749a02 
+		box-shadow: 0 0 25px #333
+	}
+	50% { 
+		background-color: #91bd09 
+		box-shadow: 0 0 50px #91bd09 
+	}
+	to { 
+		background-color: #749a02
+		box-shadow: 0 0 25px #333
+	}
+}
+@keyframes redPulse {
+	from { 
+		background-color: #007d9a 
+		box-shadow: 0 0 9px #333 
+	}
+	50% { 
+		background-color: #2daebf
+		box-shadow: 0 0 18px #2daebf
+	}
+	to { 
+		background-color: #007d9a
+		box-shadow: 0 0 9px #333 
+	}
+}
+.bigAssButtonPulse
+	animation-name: bigAssButtonPulse
+	animation-duration: 1s
+	animation-iteration-count: infinite
+.redPulse
+	animation-name: redPulse
+	animation-duration: 1s
+	animation-iteration-count: infinite
+/*全局动画结束*/
