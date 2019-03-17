@@ -82,21 +82,54 @@ export default {
     computed: {
         ...mapGetters(['currentEOS','account'])
     },
+    watch: {
+        account(val,old){
+            if(val){
+                this.getnextgameid();
+            }
+        }  
+    },
+    data () {
+        return {
+            betId: null, // TODO: 当前下注betID      
+        }
+    },
     methods: {
+        /**
+         * @description 获取当前下注ID
+         */
+        getnextgameid(){
+            const eos = scatter.eos(config.network, Eos, {});
+            eos.getTableRows({
+                "scope": config.contractName, 
+                "code": config.contractName,
+                "table":"vardic", 
+                "json": true})
+            .then((res) => {
+                if(res.rows && res.rows.length){
+                    let findbetiditem = res.rows.find( item => item.id == 6);
+                    if(findbetiditem){
+                        this.betId = parseInt(findbetiditem.value - 1);
+                    }else{
+                        this.betId = 1;
+                    }
+                }
+            }).catch((err) => {
+                console.log(err);
+            });
+        },
+        /**
+         * @description 下注功能
+         */
         doAction(){ //下注
             const eos = scatter.eos(config.network, Eos, {});
-            // eos.getTableRows({"scope": config.contractName, "code": config.contractName, "table":"game", "json": true}).then((res) => {
-            //     console.log(res);
-            // }).catch((err) => {
-            //     console.log(err);
-            // });
-            // '[ "yanwankun111", "myeosgame111", "3.0000 EOS", "gamebet:28:1:test"]'
             let betopt = {
                 from: this.account.name, 
-                to: 'myeosgame111',
+                to: 'gentelmen123', //gentelmen123、gentlemen123
                 quantity: '10.0000 EOS',
-                memo: `gamebet:28:1:${this.account.name}` 
+                memo: `gamebet:${this.betId}:1:${this.account.name}` 
             }
+            console.log('下注参数。。。。');
             console.log(betopt);
             eos.transfer(betopt).then((res) => {
                 console.log(res);

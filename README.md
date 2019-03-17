@@ -92,6 +92,26 @@ static vector<int> cards = {999, // 这个999是无效数据，占用位置0
 
 302 就代表 樱花 4
 
+# 使用示例
+
+cleos --url http://kylin.fn.eosbixin.com push action eosio.token transfer '[ "yanwankun111", "gentelmen123", "1.0000 EOS", "gamebet:4:1:test"]' -p yanwankun111
+gamebet : 这个是固定前缀
+4 : 是代表gameid
+1 ： 是代表下注类型 enum bet_type_enum : int8_t {
+DRAGON_WIN = 1, // 龙赢
+DRAGON_EVEN = 2, // 龙双
+DRAGON_ODD = 3, // 龙单
+DRAGON_BLACK = 4, // 龙黑
+DRAGON_RED = 5, // 龙红
+SAME = 6,
+TIGER_WIN = 7, // 虎赢
+TIGER_EVEN = 8, // 虎双
+TIGER_ODD = 9, // 虎单
+TIGER_BLACK = 10, // 虎黑
+TIGER_RED = 11, // 虎红
+};
+test : 自己得随机因子
+
 # 接口文档
 https://github.com/cherish0921/poker_game/blob/master/dragontiger/myeosgame111.md
 
