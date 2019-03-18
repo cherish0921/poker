@@ -21,15 +21,15 @@ https://kylin.eosx.io/tools/account/create
     "msg": "succeeded", 
     "keys": {
         "active_key": {
-            "public": "EOS8gmrBpEmAWto4ea46MyU4PrE9TVpBoh8TvR7kkTwLMNESrL9WK", 
-            "private": "5JjEywaQH78EZdazFtF9DW18fhJLHUdC7kuCzSvkpnaddH6LvcQ"
+            "public": "EOS66PoGDqdpfzANoFvLEgbypaftb7hwLSPQgir5okYn8hkqr6e52", 
+            "private": "5JxpUTXe3fAWTtWe6CAVEDFFVKjdorqoQPQdejoMHWCkYhPqNfL"
         }, 
         "owner_key": {
-            "public": "EOS4xvVwV9VeM4TtknvswNVguhhW8owy22aAWpyaw4UKiAzUnrNbg", 
-            "private": "5KHLi8mNM2otYkhtZGV6HEBZeNPEdNQf6UuXFefv4Hh8fQ26AS1"
+            "public": "EOS7fakzCWWgzeYQmAB8H9AzjbAseTiNqXKVHBt6gZYzvEYN3P6jj", 
+            "private": "5KWqcxbnA2tNu3pCTofBH8vPcA9D5UCL5G5tWhz2eyrdmhqN4hJ"
         }
     }, 
-    "account": "myeostest333"
+    "account": "eospokerdt13"
 }
 
 # 合约地址
@@ -117,3 +117,6 @@ https://github.com/cherish0921/poker_game/blob/master/dragontiger/myeosgame111.m
 
 # eosjs调用示例
 https://github.com/qq776355102/eos_dapp_development_cn/blob/master/docs/eosjs_manual.md
+
+# 倒计时插件
+https://vac.js.org/
