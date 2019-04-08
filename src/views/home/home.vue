@@ -159,7 +159,7 @@ export default {
                     "json": true
                 });
                 if(res.rows && res.rows.length){
-                    let findbetiditem = res.rows.find( item => item.id == 6);
+                    let findbetiditem = res.rows.find( item => item.id == 5);
                     if(findbetiditem){
                         this.betId = parseInt(findbetiditem.value - 1);
                         console.log('当前下注ID....');
@@ -220,8 +220,8 @@ export default {
             const eos = scatter.eos(config.network, Eos, {});
             let betopt = {
                 from: this.account.name, 
-                to: 'gentelmen123', //gentelmen123、gentlemen123
-                quantity: '10.0000 EOS',
+                to: config.contractName, //gentelmen123、gentlemen123
+                quantity: '0.1000 EOS',
                 memo: `gamebet:${this.betId}:1:test` 
             }
             eos.transfer(betopt).then((res) => {

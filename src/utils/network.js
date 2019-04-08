@@ -1,5 +1,5 @@
 const config = {
-    contractName: 'gentelmen123',
+    contractName: process.env.NODE_ENV != 'production' ? 'gentelmen123' : 'poker4dtgame',
     network: {
         blockchain: 'eos',
         host: process.env.NODE_ENV != 'production' ? '//api-kylin.eosasia.one' : 'api1.eosasia.one',
